@@ -32,12 +32,15 @@ class App extends Component {
     } else{
         data = this.props.articles.map((article)=> {
           return (
-            <div className="row col s12 m6" style={{...flexStyle, flexDirection: 'column' ,height:'100vh',background: 'linear-gradient(to right, #642B73 0%, #C6426E 100%)'}}>
+            <div className=" card z-depth-4" style={{height:'auto',margin:'18px',textAlign:'center'}}>
+          
+            <div style={{...flexStyle, color: "white", flexDirection: 'column',padding:'5px' ,height:'auto',background: 'linear-gradient(to right, #642B73 0%, #C6426E 100%)'}}>
               <h3 style={{fontFamily: "Lobster"}}>{article.title}</h3>
               <p style={{fontFamily: "Josefin Sans"}}>{article.description}</p>
               <p style={{fontStyle:"italic", fontFamily: "Cormorant Garamond"}}>-{article.author}</p>
               <hr/>
               <p style={{fontFamily: "Cinzel"}}>Scroll down for more</p>
+            </div>
             </div>
           )
         })
